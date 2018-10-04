@@ -11,7 +11,7 @@ if [ `git rev-list HEAD...origin/master --count` != 0 ]; then
   php artisan down
 
   # Dependencies
-  composer install --no-interaction --prefer-dist --optimize-autoloader
+  composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
   yarn install
 
   # Clear cache and rebuild if necessary
